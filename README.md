@@ -45,7 +45,6 @@ SELECT category, SUM(sales) AS total_sales
 FROM retail_sales
 GROUP BY category;
 ```
-ممم
 - **Sales Over Time**  
   Analyzed total sales by date to observe trends and peak periods.
 ```sql
