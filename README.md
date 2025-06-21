@@ -39,19 +39,46 @@ Below are the key types of SQL queries used in this project:
 
 - **Total Sales by Category**  
   Aggregated sales amount per product category using `GROUP BY`.
-
+```sql
+-- Total Sales by Category
+SELECT category, SUM(sales) AS total_sales
+FROM retail_sales
+GROUP BY category;
+```
+ممم
 - **Sales Over Time**  
   Analyzed total sales by date to observe trends and peak periods.
-
+```sql
+-- Sales Over Time
+SELECT sales_date, SUM(sales) AS total_sales
+FROM retail_sales
+GROUP BY sales_date
+ORDER BY sales_date;
+```
 - **Customer Demographics**  
-  Explored distribution of customers by age and gender.
-
+  Explored the distribution of customers by age and gender.
+```sql
+-- Customer Demographics
+SELECT age, gender, COUNT(*) AS number_of_customers
+FROM retail_sales
+GROUP BY age, gender;
+```
 - **Order Volume by Gender**  
   Counted number of orders made by male and female customers.
-
+```sql
+-- Order Volume by Gender
+SELECT gender, COUNT(*) AS order_count
+FROM retail_sales
+GROUP BY gender;
+```
 - **High-Value Orders**  
   Filtered for orders with total sales above a certain threshold.
-
+```sql
+-- High-Value Orders
+SELECT * 
+FROM retail_sales
+WHERE sales > 1000;
+```
 Each query was executed using basic SQL clauses such as `SELECT`, `WHERE`, `GROUP BY`, `ORDER BY`, and simple conditional filters.
 
 ## Key Findings
