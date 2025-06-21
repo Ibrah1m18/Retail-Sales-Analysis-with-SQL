@@ -19,7 +19,8 @@ CREATE TABLE retail_sales
                 total_sale FLOAT
             );
 
-SELECT * FROM retail_sales
+SELECT *
+FROM retail_sales
 LIMIT 10
 
 
@@ -30,16 +31,20 @@ SELECT
 FROM retail_sales
 
 -- Data Cleaning
-SELECT * FROM retail_sales
+SELECT * 
+FROM retail_sales
 WHERE transactions_id IS NULL
 
-SELECT * FROM retail_sales
+SELECT * 
+FROM retail_sales
 WHERE sale_date IS NULL
 
-SELECT * FROM retail_sales
+SELECT * 
+FROM retail_sales
 WHERE sale_time IS NULL
 
-SELECT * FROM retail_sales
+SELECT *
+FROM retail_sales
 WHERE 
     transaction_id IS NULL
     OR
@@ -58,7 +63,8 @@ WHERE
     total_sale IS NULL;
     
 -- 
-DELETE FROM retail_sales
+DELETE 
+FROM retail_sales
 WHERE 
     transaction_id IS NULL
     OR
@@ -79,12 +85,15 @@ WHERE
 -- Data Exploration
 
 -- How many sales do we have?
-SELECT COUNT(*) as total_sale FROM retail_sales
+SELECT COUNT(*) as total_sale 
+FROM retail_sales
 
 -- How many unique customers do we have?
-SELECT COUNT(DISTINCT customer_id) as total_sale FROM retail_sales
+SELECT COUNT(DISTINCT customer_id) as total_sale
+FROM retail_sales
 
-SELECT DISTINCT category FROM retail_sales
+SELECT DISTINCT category 
+FROM retail_sales
 
 
 -- Data Analysis & Business Key Problems & Answers
